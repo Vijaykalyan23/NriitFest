@@ -1,0 +1,148 @@
+{
+    "departments": {
+      "FED-1": {
+        "student_coordinator": {
+          "name": "M.HOMESH",
+          "roll_no": "24KN1A42B3",
+          "class": "CSM -B",
+          "phone": "7013028648"
+        },
+        "faculty_coordinator": {
+          "name": "Dr B Sri Hari Rao",
+          "phone": "9293786399"
+        },
+        "events": {
+          "Maths": "Math Magic Show",
+          "English": "Declamation"
+        }
+      },
+      "FED-2": {
+        "faculty_coordinator": {
+          "name": "Dr. G. Srinivasa Rao",
+          "phone": "9866391041"
+        },
+        "student_coordinator": {
+          "name": "R Madhu Venkata Sai Ganesh",
+          "phone": "9666485544"
+        },
+        "events": {
+          "Physics": "Rebus Puzzles in Physics",
+          "Chemistry": "Poster presentation - Role of advanced materials in engineering"
+        }
+      },
+      "CSE": {
+        "faculty_coordinators": [
+          {"name": "Mr.N.V.Satyanarayana", "phone": "9885190561", "email": "satya4satya@gmail.com"},
+          {"name": "Mr.P.Somaraju", "phone": "9703130583", "email": "somaraju.p@nriit.edu.in"}
+        ],
+        "student_coordinator": {
+          "name": "Mr.M.Sravan",
+          "phone": "8317634794",
+          "email": "sravanmandava1126@gmail.com"
+        },
+        "events": ["Code Sankalp", "Avishkar Anveshan", "Logo Quiz", "Bug War"]
+      },
+      "CSE-DS": {
+        "faculty_coordinator": {
+          "name": "Mr. B. Phanindra Kumar",
+          "phone": "9014260174"
+        },
+        "student_coordinator": {
+          "name": "K.Sripathi Rao",
+          "phone": "8328109217"
+        }
+      },
+      "CSE-AIML": {
+        "faculty_coordinator": {
+          "name": "Mr.Rajenra",
+          "phone": "9494367464"
+        },
+        "student_coordinator": {
+          "name": "Mr. N.Bhogeeswar",
+          "phone": "8309298044"
+        },
+        "events": ["Paper Presentation", "Poster Presentation", "Project Expo", "Code Hackathon"]
+      },
+      "AIML": {
+        "faculty_coordinator": {
+          "name": "Dr. Y. Arpitha",
+          "phone": "9493468888"
+        },
+        "student_coordinator": {
+          "name": "K. Sai Harsha",
+          "phone": "9985584854"
+        },
+        "events": ["Code & Quest", "Ideathon", "Prompt Perfect", "PPT Challenge"]
+      },
+      "ECE": {
+        "faculty_coordinator": {
+          "name": "Gottipati Srinivas Babu",
+          "phone": "9492273639",
+          "email": "srinivasababug@nriit.edu.in"
+        },
+        "student_coordinator": {
+          "name": "K Maanas Reddy",
+          "phone": "9515739145",
+          "email": "maanasr116@gmail.com"
+        },
+        "events": ["Technical Quiz", "Technical Paper Presentations", "Poster Presentations", "Project Expo"]
+      },
+      "EEE": {
+        "faculty_coordinator": {
+          "name": "Mr.R.Raghu Nadha Sastry",
+          "phone": "9490337572"
+        },
+        "student_coordinator": {
+          "name": "MATTA BALA VENKATA SAI",
+          "phone": "7207219186"
+        },
+        "events": ["Poster Presentation", "Paper Presentation", "Technical Quiz", "Electrical Project Expo"]
+      },
+      "Mechanical": {
+        "faculty_coordinator": {
+          "name": "Mrs. CH. Srilatha",
+          "phone": "8985140500",
+          "email": "srilatha@nriit.edu.in"
+        },
+        "student_coordinator": {
+          "name": "Mr. N. Bharath",
+          "phone": "8247329390",
+          "email": "bharathnaraga@gmail.com"
+        },
+        "events": ["Technical Paper Presentation", "Project Expo", "Thrust Rocket", "CAD Builder"]
+      },
+      "Civil": {
+        "faculty_coordinator": {
+          "name": "A Sai Chandu",
+          "phone": "9346799566"
+        },
+        "student_coordinator": {
+          "name": "Santi Swaroop",
+          "phone": "9573496479"
+        },
+        "events": ["Poster Presentation", "Paper Presentation", "Technical Quiz", "CAD Crusade"]
+      },
+      "IT": {
+        "faculty_coordinator": {
+          "name": "Smt.G.Baleswari",
+          "phone": "8500275537"
+        },
+        "student_coordinator": {
+          "name": "T.Revanth",
+          "phone": "8886168440"
+        }
+      },
+      "MBA": {
+        "faculty_coordinator": {
+          "name": "Dr.K.Chinni Krishna",
+          "phone": "9393363615"
+        },
+        "student_coordinator": {
+          "name": "D. Aravind",
+          "phone": "9010655815"
+        },
+        "events": ["Young Manager", "Market Makers", "Bizz Quiz"]
+      }
+    }
+  }
+  
