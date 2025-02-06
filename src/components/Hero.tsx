@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Sparkles, Users, Music, Star } from 'lucide-react';
-
+import { Calendar, MapPin, Sparkles, Users, Music, Star, Clock } from 'lucide-react';
 
 const Hero = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const difference = +new Date('2025-02-21') - +new Date();
+      
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const highlights = [
     { icon: Calendar, text: 'Feb 21-22, 2025' },
     { icon: MapPin, text: 'College Campus' },
@@ -134,30 +160,48 @@ const Hero = () => {
               Experience the ultimate celebration of music, art, and culture at the biggest college festival of the year
             </motion.p>
 
-            CTA Buttons
+            {/* Timer Title */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="mt-12 mb-6"
+            >
+              <div className="relative inline-block">
+                <span className="absolute -inset-2 bg-gradient-to-r from-purple-600/50 via-pink-500/50 to-blue-600/50 opacity-50 blur-lg rounded-lg" />
+                <h2 className="relative text-2xl md:text-3xl font-bold px-6 py-2 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
+                  <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 text-transparent bg-clip-text">
+                    College Fest: Time's Ticking!
+                  </span>
+                </h2>
+              </div>
+            </motion.div>
+
+            {/* Countdown Timer */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="mt-12 flex flex-col sm:flex-row gap-6 justify-center"
+              className="flex flex-wrap justify-center gap-6"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative inline-flex items-center px-8 py-4 text-lg font-bold text-white overflow-hidden rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 shadow-lg hover:shadow-purple-500/25"
-              >
-                <Sparkles className="w-5 h-5 mr-2 animate-pulse" />
-                Get Your Tickets
-                <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative inline-flex items-center px-8 py-4 text-lg font-bold text-white overflow-hidden rounded-xl border border-purple-500/30 hover:border-purple-500/50 transition-colors"
-              >
-                View Schedule
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-purple-600/10 to-blue-600/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-              </motion.button>
+              {Object.entries(timeLeft).map(([unit, value]) => (
+                <motion.div
+                  key={unit}
+                  whileHover={{ scale: 1.05 }}
+                  className="relative group"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-xl blur-xl group-hover:opacity-100 transition-opacity opacity-0" />
+                  <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 min-w-[140px]">
+                    <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
+                      {value}
+                    </div>
+                    <div className="text-gray-400 mt-2 capitalize">
+                      {unit}
+                    </div>
+                    <Clock className="absolute top-2 right-2 w-4 h-4 text-purple-400 opacity-50" />
+                  </div>
+                </motion.div>
+              ))}
             </motion.div>
           </motion.div>
         </div>

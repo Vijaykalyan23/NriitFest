@@ -1,37 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Instagram, Music, Star } from 'lucide-react';
+import { Instagram, Music, Star,Guitar } from 'lucide-react';
 
 const Artists = () => {
   const artists = [
     {
-      name: 'The Local Train',
-      role: 'Rock Band',
-      image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80',
+      name: 'Orientation program',
+      role: 'A Grand Welcome: Inspiring the Future at NRIIT Orientation Program',
+      image: 'https://i.ibb.co/CsWcSqZ8/nriit-vijayawada-official-20250206-0011-1-1.jpg',
       instagram: '#'
     },
     {
-      name: 'DJ Shadow',
-      role: 'Electronic Music',
-      image: 'https://images.unsplash.com/photo-1549046666-7c422ab19783?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8REolMjBzaGFkb3d8ZW58MHx8MHx8fDA%3D',
+      name: 'Bharatanatyam    ',
+      role: 'Graceful Rhythms of Bharatanatyam',
+      image: 'https://i.ibb.co/mCcZD5Wk/nriit-vijayawada-official-20250206-0003-1.jpg',
       instagram: '#'
     },
     {
-      name: 'Prateek Kuhad',
-      role: 'Singer-Songwriter',
-      image: 'https://images.unsplash.com/photo-1529518969858-8baa65152fc8?auto=format&fit=crop&w=800&q=80',
-      instagram: '#'
+      name: 'Music Band',
+      icon: Guitar,
+      role: 'Let the Music Play',
+      image: 'https://i.ibb.co/tTrS9CHn/IMG-20231127-120708.jpg',
     },
     {
-      name: 'When Chai Met Toast',
-      role: 'Indie Band',
-      image: 'https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=800&q=80',
+      name: 'Flash mob',
+      role: 'The Pulse of Unity',
+      image: 'https://i.ibb.co/Xk8TD8fH/Screenshot-20250206-141012-2.jpg',
       instagram: '#'
     }
   ];
 
   return (
-    <section id="artists" className="relative py-20 overflow-hidden">
+    <section id="highlights" className="relative py-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-black to-blue-900/30" />
@@ -83,7 +83,7 @@ const Artists = () => {
           <h2 className="text-4xl md:text-5xl font-bold relative">
             <span className="absolute -inset-2 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 opacity-50 blur-xl animate-pulse" />
             <span className="relative bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 text-transparent bg-clip-text">
-              Featured Artists
+              Featured Highlights
             </span>
           </h2>
         </motion.div>
@@ -118,8 +118,7 @@ const Artists = () => {
                       whileTap={{ scale: 0.95 }}
                       className="inline-flex items-center mt-2 text-purple-400 hover:text-purple-300"
                     >
-                      <Instagram className="w-4 h-4 mr-1" />
-                      Follow
+                     
                     </motion.a>
                   </div>
                 </div>
