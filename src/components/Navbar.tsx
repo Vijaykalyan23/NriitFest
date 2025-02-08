@@ -18,8 +18,15 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const navItems = [
-    { name: 'Home', icon: Home },
+    { name: 'Home', icon: Home, onClick: scrollToTop },
     { name: 'Schedule', icon: Calendar },
     { name: 'Events', icon: Music },
     { name: 'Highlights', icon: StepBack },
@@ -34,7 +41,16 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <img src={Logo} alt="Sunrise 2025" className="h-28 w-auto object-contain " />
+            <a 
+              href="#home" 
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToTop();
+              }}
+              className="cursor-pointer"
+            >
+              <img src={Logo} alt="Sunrise 2025" className="h-28 w-auto object-contain hidden md:block" />
+            </a>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -43,6 +59,12 @@ const Navbar = () => {
                   key={item.name}
                   href={`#${item.name.toLowerCase()}`}
                   className="group flex items-center space-x-2 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105"
+                  onClick={(e) => {
+                    if (item.onClick) {
+                      e.preventDefault();
+                      item.onClick();
+                    }
+                  }}
                 >
                   <item.icon className="w-4 h-4 transition-transform group-hover:rotate-12" />
                   <span>{item.name}</span>
@@ -70,6 +92,13 @@ const Navbar = () => {
                 key={item.name}
                 href={`#${item.name.toLowerCase()}`}
                 className="flex items-center space-x-2 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                onClick={(e) => {
+                  if (item.onClick) {
+                    e.preventDefault();
+                    item.onClick();
+                  }
+                  setIsMobileMenuOpen(false);
+                }}
               >
                 <item.icon className="w-4 h-4" />
                 <span>{item.name}</span>

@@ -37,7 +37,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id='home' className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id='home' className="relative min-h-screen flex items-center justify-center overflow-hidden  ">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-black to-blue-900/30" />
@@ -125,7 +125,7 @@ const Hero = () => {
             >
               <span className="inline-block relative">
                 <span className="absolute -inset-2 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 opacity-50 blur-xl animate-pulse" />
-                <span className="relative bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 text-transparent bg-clip-text">
+                <span className="relative bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 text-transparent bg-clip-text pt-2 sm:pt-16 md:pt-20 lg:pt-26 ">
                   SUNRISE 2025
                 </span>
               </span>
