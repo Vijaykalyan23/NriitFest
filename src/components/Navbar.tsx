@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Music, StepBack, Info, Ticket, Menu, X } from 'lucide-react';
+import { Calendar, Music, StepBack, Info, Ticket, Menu, X, Home } from 'lucide-react';
 import Logo from "../assests/Logo.png";
 
 const Navbar = () => {
@@ -19,6 +19,7 @@ const Navbar = () => {
   };
 
   const navItems = [
+    { name: 'Home', icon: Home },
     { name: 'Schedule', icon: Calendar },
     { name: 'Events', icon: Music },
     { name: 'Highlights', icon: StepBack },
