@@ -49,7 +49,7 @@ const Navbar = () => {
               }}
               className="cursor-pointer"
             >
-              <img src={Logo} alt="Sunrise 2025" className="h-28 w-auto object-contain" />
+              <img src={Logo} alt="Sunrise 2025" className="h-28 w-auto object-contain hidden md:block" />
             </a>
           </div>
           <div className="hidden md:block">
