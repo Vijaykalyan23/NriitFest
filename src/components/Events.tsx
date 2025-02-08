@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Crown, Heart, Music, Users, Mic, Palette, Brush, Theater, Users2, Camera, Instagram, Map } from 'lucide-react';
+import { Crown, Heart, Music, Users, Mic, Palette, Brush, Theater, Users2, Camera, Instagram, Map, PersonStanding } from 'lucide-react';
 
 const Events = () => {
   const events = [
@@ -17,7 +17,7 @@ const Events = () => {
       color: 'from-pink-500 to-rose-500'
     },
     {
-      icon: Music,
+      icon: PersonStanding,
       title: 'CLASSICAL DANCE (SOLO)',
       description: 'Express the beauty of traditional Indian classical dance forms',
       color: 'from-orange-500 to-red-500'
